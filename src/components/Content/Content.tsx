@@ -1,7 +1,14 @@
-import React from 'react';
+import {FC, useEffect, useState} from 'react';
 import styles from './Content.module.scss'
+import {PostsService} from "../../API/PulseAPI/PostsService";
 
-const Content = () => {
+const Content: FC = () => {
+  const [lastPost, setLastPost] = useState()
+
+  useEffect(() => {
+    const result = PostsService.getLastPost()
+  }, [])
+
   return (
     <div className={styles.content}>
       <div className={styles.content__research}>
