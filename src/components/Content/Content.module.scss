@@ -55,13 +55,72 @@
       width: 90%;
       text-align: justify;
     }
+
     p:not(:first-child) {
       margin-top: 15px;
     }
   }
 
-  &__pulse_last_post {
+  &__pulse {
+    width: 90%;
+    margin-top: 15px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    * {
+      background-color: transparent;
+    }
+
+    &__wrapper {
+      background-color: #252525;
+      border-radius: 15px;
+      border: 1px black solid;
+      padding: 15px;
+      width: 90%;
+
+      &__title {
+        margin-bottom: 15px;
+        color: #E1C328;
+      }
+
+      &__owner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+          margin-bottom: 5px;
+        }
+
+        &__image {
+          border-radius: 50%;
+          width: 64px;
+        }
+
+        &__nickname {
+          margin-left: 5px;
+        }
+      }
+
+      &__post {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+          word-wrap: break-word;
+        }
+
+        &__image {
+          width: 200px;
+        }
+      }
+    }
   }
 }
 
@@ -76,6 +135,12 @@
     &__description > p {
       width: 75%;
     }
+
+    &__pulse {
+      &__wrapper {
+        width: calc(75% - 15px);
+      }
+    }
   }
 }
 
@@ -89,6 +154,12 @@
 
     &__description > p {
       width: 50%;
+    }
+
+    &__pulse {
+      &__wrapper {
+        width: calc(50% - 15px);
+      }
     }
   }
 }

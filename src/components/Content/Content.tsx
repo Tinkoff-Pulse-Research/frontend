@@ -1,9 +1,10 @@
 import {FC, useCallback, useEffect, useState} from 'react';
 import styles from './Content.module.scss'
 import {PostsService} from "../../API/PulseAPI/PostsService";
+import {IResponseData} from "../../interfaces/interfaces";
 
 const Content: FC = () => {
-  const [lastPost, setLastPost] = useState()
+  const [lastPost, setLastPost] = useState<IResponseData>()
 
   const getData = useCallback(async () => {
     await PostsService.getLastPost().then((response) => {
@@ -39,12 +40,22 @@ const Content: FC = () => {
           <span className={styles.content__description__highlight}>Памп</span> - провоцируемый рост акционерами спроса на активы с целью дальнейшей его продажи по высокой цене
         </p>
       </div>
-      <div className={styles.content__images}>
-        <img src="images/pulse_3d.png" alt=""/>
-      </div>
-      <div className={styles.content__pulse_last_post}>
-        <h3>Рекомендуем прочитать</h3>
-        ...
+      <div className={styles.content__pulse}>
+        <div className={styles.content__pulse__wrapper}>
+          <h3 className={styles.content__pulse__wrapper__title}>Рекомендуем прочитать</h3>
+          <div className={styles.content__pulse__wrapper__owner}>
+            <img
+              src={`https://www.tinkoff.ru/api/invest-gw/social/file/v1/cache/profile/avatar/${lastPost?.image}?size=big&appName=invest&platform=web`}
+              alt=""
+              className={styles.content__pulse__wrapper__owner__image}
+            />
+            <h4 className={styles.content__pulse__wrapper__owner__nickname}>{lastPost?.owner.nickname}</h4>
+          </div>
+          <div className={styles.content__pulse__wrapper__post}>
+            <p className={styles.content__pulse__wrapper__post__title}>Test</p>
+            <img className={styles.content__pulse__wrapper__post__image} src={lastPost?.content.headerImage.url} alt=""/>
+          </div>
+        </div>
       </div>
     </div>
   );
