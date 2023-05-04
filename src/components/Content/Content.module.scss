@@ -28,7 +28,40 @@
       resize: none;
       height: 120px;
       width: 90%;
+      font-size: 16px;
+      text-indent: 5px;
+      line-height: 1.5em;
     }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 90%;
+
+    &__highlight {
+      background-color: #E1C328;
+      color: #202020;
+      border-radius: 2px;
+      padding: 2px;
+      font-weight: bolder;
+    }
+
+    p {
+      word-wrap: break-word;
+      width: 90%;
+      text-align: justify;
+    }
+    p:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__pulse_last_post {
+
   }
 }
 
@@ -39,6 +72,10 @@
         width: 75%;
       }
     }
+
+    &__description > p {
+      width: 75%;
+    }
   }
 }
 
@@ -48,6 +85,10 @@
       &__field, &__submit {
         width: 50%;
       }
+    }
+
+    &__description > p {
+      width: 50%;
     }
   }
 }
