@@ -6,7 +6,21 @@
   background-color: #333333;
   padding: 15px;
 
+  &__title {
+    text-align: center;
+  }
+
   * {
     background-color: transparent;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header * {
+    margin-top: 15px;
   }
 }

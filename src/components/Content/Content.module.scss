@@ -3,4 +3,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &__research {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+
+    &__submit {
+      margin-left: 15px;
+      background-color: #478EF6;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    &__field {
+      background-color: #1E1E1E;
+      border-radius: 10px;
+      resize: none;
+      height: 40px;
+    }
+  }
 }
