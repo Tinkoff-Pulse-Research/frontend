@@ -1,12 +1,20 @@
-import {FC, useEffect, useState} from 'react';
+import {FC, useCallback, useEffect, useState} from 'react';
 import styles from './Content.module.scss'
 import {PostsService} from "../../API/PulseAPI/PostsService";
 
 const Content: FC = () => {
   const [lastPost, setLastPost] = useState()
 
+  const getData = useCallback(async () => {
+    await PostsService.getLastPost().then((response) => {
+      if (response?.status === 'Ok') {
+        setLastPost(response?.payload?.items[0])
+      }
+    })
+  }, [])
+
   useEffect(() => {
-    const result = PostsService.getLastPost()
+    getData()
   }, [])
 
   return (
