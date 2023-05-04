@@ -34,27 +34,32 @@ const Content: FC = () => {
           <span className={styles.content__description__highlight}>СД</span> - Совет компании по Дивидендам
         </p>
         <p>
-          <span className={styles.content__description__highlight}>Дивы</span> - дивиденды, часть суммы чистой прибыли акционерного общества, распределяемая между акционерами в соответствии с количеством акций
+          <span className={styles.content__description__highlight}>Дивы</span> - дивиденды, часть суммы чистой прибыли
+          акционерного общества, распределяемая между акционерами в соответствии с количеством акций
         </p>
         <p>
-          <span className={styles.content__description__highlight}>Памп</span> - провоцируемый рост акционерами спроса на активы с целью дальнейшей его продажи по высокой цене
+          <span className={styles.content__description__highlight}>Памп</span> - провоцируемый рост акционерами спроса
+          на активы с целью дальнейшей его продажи по высокой цене
         </p>
       </div>
       <div className={styles.content__pulse}>
         <div className={styles.content__pulse__wrapper}>
-          <h3 className={styles.content__pulse__wrapper__title}>Рекомендуем прочитать</h3>
-          <div className={styles.content__pulse__wrapper__owner}>
-            <img
-              src={`https://www.tinkoff.ru/api/invest-gw/social/file/v1/cache/profile/avatar/${lastPost?.image}?size=big&appName=invest&platform=web`}
-              alt=""
-              className={styles.content__pulse__wrapper__owner__image}
-            />
-            <h4 className={styles.content__pulse__wrapper__owner__nickname}>{lastPost?.owner.nickname}</h4>
-          </div>
-          <div className={styles.content__pulse__wrapper__post}>
-            <p className={styles.content__pulse__wrapper__post__title}>Test</p>
-            <img className={styles.content__pulse__wrapper__post__image} src={lastPost?.content.headerImage.url} alt=""/>
-          </div>
+          <a href="https://www.tinkoff.ru/invest/social/profile/Tinkoff_Investments/" target="_blank">
+            <h3 className={styles.content__pulse__wrapper__title}>Рекомендуем прочитать</h3>
+            <div className={styles.content__pulse__wrapper__owner}>
+              <img
+                src={`https://www.tinkoff.ru/api/invest-gw/social/file/v1/cache/profile/avatar/${lastPost?.image}?size=big&appName=invest&platform=web`}
+                alt=""
+                className={styles.content__pulse__wrapper__owner__image}
+              />
+              <h4 className={styles.content__pulse__wrapper__owner__nickname}>{lastPost?.owner.nickname}</h4>
+            </div>
+            <div className={styles.content__pulse__wrapper__post}>
+              <h3 className={styles.content__pulse__wrapper__post__title}>{lastPost?.content.title}</h3>
+              <img className={styles.content__pulse__wrapper__post__image} src={lastPost?.content.headerImage.url}
+                   alt=""/>
+            </div>
+          </a>
         </div>
       </div>
     </div>
