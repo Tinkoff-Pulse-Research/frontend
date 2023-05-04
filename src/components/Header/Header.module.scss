@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #333333;
+  padding: 15px;
+
+  * {
+    background-color: transparent;
+  }
+}
