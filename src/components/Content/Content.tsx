@@ -52,11 +52,12 @@ const Content: FC = () => {
                 alt=""
                 className={styles.content__pulse__wrapper__owner__image}
               />
-              <h4 className={styles.content__pulse__wrapper__owner__nickname}>{lastPost?.owner.nickname}</h4>
+              <h4 className={styles.content__pulse__wrapper__owner__nickname}>{lastPost?.owner?.nickname}</h4>
             </div>
             <div className={styles.content__pulse__wrapper__post}>
-              <h3 className={styles.content__pulse__wrapper__post__title}>{lastPost?.content.title}</h3>
-              <img className={styles.content__pulse__wrapper__post__image} src={lastPost?.content.headerImage.url}
+              <h3 className={styles.content__pulse__wrapper__post__title}>{lastPost?.content?.title}</h3>
+              <p className={styles.content__pulse__wrapper__post__text}>{lastPost?.content?.text}</p>
+              <img className={styles.content__pulse__wrapper__post__image} src={lastPost?.content?.headerImage?.url}
                    alt=""/>
             </div>
           </a>

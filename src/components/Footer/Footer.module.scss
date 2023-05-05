@@ -4,12 +4,10 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
-  color: #353535;
-  background-color: #181818;
-  margin-top: 15px;
+  background: none;
 
   * {
-    background: transparent;
+    color: #353535;
   }
 
   &__link {
@@ -25,7 +23,7 @@
     }
   }
 
-  &__title {
+  &__content__title {
     text-align: center;
   }
 }

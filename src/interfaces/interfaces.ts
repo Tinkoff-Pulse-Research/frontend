@@ -54,6 +54,7 @@ export interface IResponseData {
     "headerImage": {
       "url": string
     },
+    text?: string,
     "video": null
   },
   "baseTariffCategory": string,

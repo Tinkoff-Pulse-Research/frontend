@@ -1,6 +1,14 @@
 * {
-  margin: 0;
-  padding: 0;
-  background-color: #202020;
-  color: white;
+	margin: 0;
+	padding: 0;
+	color: white;
+	background: url("https://business.cdn-tinkoff.ru/static/projects/sso-mono/assets/tinkoff-background.svg") no-repeat 100% 100% #fcfcfc;
+	font-family: TinkoffSans, 'sans-serif';
+}
+
+@font-face {
+	font-family: 'TinkoffSans';
+	src: url('https://www.cdn-tinkoff.ru/frontend-libraries/npm/react-kit-font/1.0.0/TinkoffSans_Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
 }
